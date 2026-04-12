@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSlover521's Minecraft Server</title>
+    <meta
+      name="description"
+      content="Join a modded Minecraft server built around Create, Steam and Rails, and more. Industrial builds, trains, and community survival."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#top">RSlover521's <span class="logo-accent">Minecraft Server</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Mods</a>
+        <a href="#join">Join</a>
+        <a href="#community">Community</a>
+      </nav>
+      <a class="btn btn-primary btn-small" href="#join">Play now</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <p class="eyebrow">Modded survival · Create · Trains</p>
+          <h1 class="hero-title">
+            Build <span class="gradient">factories</span>,<br />
+            ride the <span class="gradient-alt">rails</span>.
+          </h1>
+          <p class="hero-lead">
+            A polished Minecraft server for players who love engineering, logistics, and
+            exploration—with <strong>Create</strong>, <strong>Create: Steam and Rails</strong>,
+            and a curated mod list that keeps the grind fun.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#join">Copy server address</a>
+            <a class="btn btn-ghost" href="#features">See what’s included</a>
+          </div>
+          <dl class="hero-stats">
+            <div>
+              <dt>Focus</dt>
+              <dd>Tech &amp; trains</dd>
+            </div>
+            <div>
+              <dt>Style</dt>
+              <dd>Community survival</dd>
+            </div>
+            <div>
+              <dt>Vibe</dt>
+              <dd>Chill, no toxicity</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="features" class="section features">
+        <div class="section-head">
+          <h2>Why play here</h2>
+          <p>
+            Heavy on Create’s kinetic contraptions and Steam and Rails’ locomotives—plus supporting
+            mods chosen for performance and fun.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <article class="card card-feature">
+            <div class="card-icon" aria-hidden="true">⚙</div>
+            <h3>Create</h3>
+            <p>
+              Gears, belts, and clever automation. Design real workshops and supply chains instead of
+              magic-block spam.
+            </p>
+          </article>
+          <article class="card card-feature">
+            <div class="card-icon" aria-hidden="true">🚂</div>
+            <h3>Steam &amp; Rails</h3>
+            <p>
+              Haul cargo and friends across the world on tracks you lay yourself. Stations, schedules,
+              and satisfying train moments.
+            </p>
+          </article>
+          <article class="card card-feature">
+            <div class="card-icon" aria-hidden="true">✦</div>
+            <h3>Curated pack</h3>
+            <p>
+              Extra mods expand exploration, storage, and QoL without turning the server into a laggy
+              kitchen sink.
+            </p>
+          </article>
+          <article class="card card-feature">
+            <div class="card-icon" aria-hidden="true">◇</div>
+            <h3>Fair &amp; social</h3>
+            <p>
+              Clear rules, active staff, and room for solo builders and rail barons alike.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="join" class="section join">
+        <div class="join-panel">
+          <div class="join-copy">
+            <h2>Join the server</h2>
+            <p>
+              Install the modpack (link yours when ready), launch, and connect with the address below.
+              Whitelist or Discord steps go here if you use them.
+            </p>
+            <ul class="join-steps">
+              <li><span>1</span> Install the official modpack / launcher profile</li>
+              <li><span>2</span> Match the listed Minecraft &amp; mod loader version</li>
+              <li><span>3</span> Paste the server IP and hop in</li>
+            </ul>
+          </div>
+          <div class="join-box">
+            <p class="join-label">Server address</p>
+            <div class="ip-row">
+              <code id="server-ip" class="ip">rslover521.duckdns.org:25566</code>
+              <button type="button" class="btn btn-primary btn-copy" id="copy-ip" aria-label="Copy server address">
+                Copy
+              </button>
+            </div>
+            <div class="badges">
+              <span class="badge">Java Edition</span>
+              <span class="badge">Modded</span>
+              <span class="badge">Create + S&amp;R</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="section community">
+        <div class="section-head">
+          <h2>Community</h2>
+          <p>Share blueprints, rail lines, and factory tours. The best builds deserve an audience.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://discord.gg/zJguWKyjDt">Discord</a>
+          <a class="btn btn-ghost" href="#">Modpack / CurseForge</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Not affiliated with Mojang or Microsoft. Minecraft is a trademark of Mojang Synergies AB.</p>
+      <p class="footer-meta">© <span id="year"></span> Your Server Name</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
