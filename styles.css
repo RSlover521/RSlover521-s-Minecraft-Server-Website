@@ -391,25 +391,63 @@ a:hover {
   background: linear-gradient(180deg, rgba(14, 18, 25, 0.65) 0%, var(--bg-deep) 100%);
 }
 
-.showcase .carousel {
-  max-width: 1100px;
+.carousel-shell {
+  max-width: 1120px;
   margin: 0 auto;
+  padding: clamp(1rem, 2.5vw, 1.35rem);
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(165deg, rgba(20, 26, 36, 0.95) 0%, rgba(7, 9, 14, 0.98) 100%);
+  border: 1px solid rgba(255, 200, 120, 0.1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.showcase .carousel {
+  margin: 0;
 }
 
 .carousel-viewport {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  box-shadow: 0 20px 64px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(61, 214, 255, 0.05);
+  border: 1px solid rgba(61, 214, 255, 0.12);
+  background: #05070b;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.45);
   aspect-ratio: 16 / 9;
+}
+
+.carousel-counter {
+  position: absolute;
+  top: clamp(0.65rem, 2vw, 1rem);
+  right: clamp(0.65rem, 2vw, 1rem);
+  z-index: 3;
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(7, 9, 14, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-counter-sep {
+  margin: 0 0.2em;
+  opacity: 0.45;
 }
 
 .carousel-track {
   display: flex;
   height: 100%;
-  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.55s cubic-bezier(0.25, 0.8, 0.25, 1);
   will-change: transform;
 }
 
@@ -433,39 +471,117 @@ a:hover {
   object-fit: cover;
 }
 
+.carousel-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 2;
+  margin: 0;
+  padding: clamp(2.5rem, 8vw, 3.25rem) clamp(1rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.35rem);
+  background: linear-gradient(
+    to top,
+    rgba(4, 6, 10, 0.94) 0%,
+    rgba(7, 9, 14, 0.65) 45%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.carousel-caption-title {
+  margin: 0 0 0.45rem;
+  max-width: 42rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  color: var(--text);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.85);
+}
+
+.carousel-caption-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0.85;
+}
+
+.carousel-caption-text {
+  margin: 0;
+  max-width: 40rem;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(232, 236, 244, 0.88);
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.75);
+}
+
+@media (max-width: 520px) {
+  .carousel-caption-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 .carousel-fab {
   position: absolute;
   top: 50%;
-  z-index: 2;
-  width: 44px;
-  height: 44px;
-  margin-top: -22px;
+  z-index: 4;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1;
   color: var(--text);
-  background: rgba(7, 9, 14, 0.72);
-  backdrop-filter: blur(8px);
+  background: rgba(7, 9, 14, 0.82);
+  backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease,
+    transform 0.15s ease;
 }
 
 .carousel-fab:hover {
-  border-color: rgba(61, 214, 255, 0.45);
-  box-shadow: 0 0 28px var(--accent-2-glow);
+  border-color: rgba(61, 214, 255, 0.5);
+  box-shadow: 0 0 32px var(--accent-2-glow), 0 8px 28px rgba(0, 0, 0, 0.45);
   color: var(--accent-2);
+  transform: translateY(-1px);
 }
 
 .carousel-fab:focus-visible {
   outline: 2px solid var(--accent-2);
   outline-offset: 2px;
+}
+
+.carousel-fab:active {
+  transform: translateY(0);
+}
+
+.carousel-fab-icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.carousel-fab-prev .carousel-fab-icon {
+  margin-left: 3px;
+  transform: rotate(135deg);
+}
+
+.carousel-fab-next .carousel-fab-icon {
+  margin-right: 3px;
+  transform: rotate(-45deg);
 }
 
 .carousel-fab-prev {
@@ -481,23 +597,30 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1.15rem auto 0;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: rgba(7, 9, 14, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   padding: 0;
   border: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.22);
   cursor: pointer;
-  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+  transition: width 0.25s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .carousel-dot:hover {
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .carousel-dot:focus-visible {
@@ -506,9 +629,10 @@ a:hover {
 }
 
 .carousel-dot[aria-current="true"] {
-  background: var(--accent-2);
-  box-shadow: 0 0 14px var(--accent-2-glow);
-  transform: scale(1.15);
+  width: 26px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 16px var(--accent-2-glow);
+  transform: scale(1.02);
 }
 
 .section-head {

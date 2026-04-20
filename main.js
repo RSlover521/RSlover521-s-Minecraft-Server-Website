@@ -16,6 +16,7 @@
       var btnPrev = root.querySelector("[data-carousel-prev]");
       var btnNext = root.querySelector("[data-carousel-next]");
       var dots = root.querySelectorAll("[data-carousel-dot]");
+      var counterCurrent = root.querySelector(".carousel-counter-current");
       var total = slides.length;
       if (!track || total === 0) return;
 
@@ -43,6 +44,9 @@
 
       function apply() {
         track.style.transform = "translateX(-" + (100 * i) / total + "%)";
+        if (counterCurrent) {
+          counterCurrent.textContent = String(i + 1);
+        }
         setAria();
       }
 

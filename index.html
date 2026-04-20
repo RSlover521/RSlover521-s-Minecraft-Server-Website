@@ -85,83 +85,127 @@
       </section>
 
       <section class="section showcase" aria-label="Server screenshots">
-        <div class="carousel" data-carousel role="region">
-          <div class="carousel-viewport">
-            <div class="carousel-track" data-carousel-track>
-              <figure class="carousel-slide">
-                <img
-                  src="images/slide-1.png"
-                  alt="Night aerial view of a snow-covered Minecraft world with a brightly lit train station and aurora in the sky."
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                  fetchpriority="high"
-                />
-              </figure>
-              <figure class="carousel-slide">
-                <img
-                  src="images/slide-2.png"
-                  alt="Foggy winter shoreline in Minecraft with a small stone fort and warm light from an entrance."
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="carousel-slide">
-                <img
-                  src="images/slide-3.png"
-                  alt="Long passenger train at a snowy Minecraft station during heavy fog and snowfall."
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="carousel-slide">
-                <img
-                  src="images/slide-4.png"
-                  alt="Minecraft hangar with a biplane and a small wooden cabin in front of snowy forest and mountains."
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="carousel-slide">
-                <img
-                  src="images/slide-5.png"
-                  alt="Large modern Minecraft train station with glass facades, platforms, and autumn trees nearby."
-                  width="1920"
-                  height="1080"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </figure>
+        <div class="carousel-shell">
+          <div class="carousel" data-carousel role="region" aria-roledescription="carousel">
+            <div class="carousel-viewport">
+              <p class="carousel-counter" data-carousel-counter>
+                <span class="carousel-counter-current">1</span>
+                <span class="carousel-counter-sep" aria-hidden="true">/</span>
+                <span class="carousel-counter-total">5</span>
+              </p>
+              <div class="carousel-track" data-carousel-track>
+                <figure class="carousel-slide">
+                  <img
+                    src="images/slide-1.png"
+                    alt="Night aerial view of a snow-covered Minecraft world with a brightly lit train station and aurora in the sky."
+                    width="1920"
+                    height="1080"
+                    decoding="async"
+                    fetchpriority="high"
+                  />
+                  <figcaption class="carousel-caption">
+                    <h3 class="carousel-caption-title">The world never sleeps.</h3>
+                    <p class="carousel-caption-text">
+                      A stunning aerial view of the server at night, showcasing glowing infrastructure and vast terrain.
+                      From above, you can truly see the scale of what’s been built.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="images/slide-3.png"
+                    alt="Long passenger train at a snowy Minecraft station during heavy fog and snowfall."
+                    width="1920"
+                    height="1080"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <figcaption class="carousel-caption">
+                    <h3 class="carousel-caption-title">A living, breathing transit system.</h3>
+                    <p class="carousel-caption-text">
+                      Trains arrive, depart, and connect regions across the world. Built with realism in mind, this
+                      system makes travel feel purposeful—not just fast.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="images/slide-2.png"
+                    alt="Foggy winter shoreline in Minecraft with a small stone fort and warm light from an entrance."
+                    width="1920"
+                    height="1080"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <figcaption class="carousel-caption">
+                    <h3 class="carousel-caption-title">Dynamic weather and atmosphere that changes how you play.</h3>
+                    <p class="carousel-caption-text">
+                      Brave the harsh winter conditions as snow and fog transform the landscape into a cinematic survival
+                      experience. Exploration feels different every time.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="images/slide-4.png"
+                    alt="Minecraft hangar with a biplane and a small wooden cabin in front of snowy forest and mountains."
+                    width="1920"
+                    height="1080"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <figcaption class="carousel-caption">
+                    <h3 class="carousel-caption-title">Industrial builds meet creativity.</h3>
+                    <p class="carousel-caption-text">
+                      A custom aircraft hangar featuring a detailed plane build and functional-style workshop design.
+                      Perfect for players who love engineering, aviation, and immersive builds.
+                    </p>
+                  </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <img
+                    src="images/slide-5.png"
+                    alt="Large modern Minecraft train station with glass facades, platforms, and autumn trees nearby."
+                    width="1920"
+                    height="1080"
+                    decoding="async"
+                    loading="lazy"
+                  />
+                  <figcaption class="carousel-caption">
+                    <h3 class="carousel-caption-title">
+                      A massive, fully detailed central transit hub built for scale and immersion.
+                    </h3>
+                    <p class="carousel-caption-text">
+                      Glass architecture, multi-level interiors, and active rail platforms bring your journeys to life.
+                      Whether you're commuting or exploring, this is the heart of the network.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+              <button
+                type="button"
+                class="carousel-fab carousel-fab-prev"
+                data-carousel-prev
+                aria-label="Previous slide"
+              >
+                <span class="carousel-fab-icon" aria-hidden="true"></span>
+              </button>
+              <button
+                type="button"
+                class="carousel-fab carousel-fab-next"
+                data-carousel-next
+                aria-label="Next slide"
+              >
+                <span class="carousel-fab-icon" aria-hidden="true"></span>
+              </button>
             </div>
-            <button
-              type="button"
-              class="carousel-fab carousel-fab-prev"
-              data-carousel-prev
-              aria-label="Previous screenshot"
-            >
-              <span aria-hidden="true">‹</span>
-            </button>
-            <button
-              type="button"
-              class="carousel-fab carousel-fab-next"
-              data-carousel-next
-              aria-label="Next screenshot"
-            >
-              <span aria-hidden="true">›</span>
-            </button>
-          </div>
-          <div class="carousel-dots" data-carousel-dots>
-            <button type="button" class="carousel-dot" data-carousel-dot aria-label="Screenshot 1" aria-current="true"></button>
-            <button type="button" class="carousel-dot" data-carousel-dot aria-label="Screenshot 2"></button>
-            <button type="button" class="carousel-dot" data-carousel-dot aria-label="Screenshot 3"></button>
-            <button type="button" class="carousel-dot" data-carousel-dot aria-label="Screenshot 4"></button>
-            <button type="button" class="carousel-dot" data-carousel-dot aria-label="Screenshot 5"></button>
+            <div class="carousel-dots" data-carousel-dots>
+              <button type="button" class="carousel-dot" data-carousel-dot aria-label="Go to slide 1" aria-current="true"></button>
+              <button type="button" class="carousel-dot" data-carousel-dot aria-label="Go to slide 2"></button>
+              <button type="button" class="carousel-dot" data-carousel-dot aria-label="Go to slide 3"></button>
+              <button type="button" class="carousel-dot" data-carousel-dot aria-label="Go to slide 4"></button>
+              <button type="button" class="carousel-dot" data-carousel-dot aria-label="Go to slide 5"></button>
+            </div>
           </div>
         </div>
       </section>
