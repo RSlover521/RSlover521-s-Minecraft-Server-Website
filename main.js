@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 (function () {
   var yearEl = document.getElementById("year");
   if (yearEl) {
