@@ -17,12 +17,17 @@
       var btnNext = root.querySelector("[data-carousel-next]");
       var dots = root.querySelectorAll("[data-carousel-dot]");
       var counterCurrent = root.querySelector(".carousel-counter-current");
+      var counterTotal = root.querySelector(".carousel-counter-total");
       var total = slides.length;
       if (!track || total === 0) return;
 
       var i = 0;
       var autoplayMs = 6500;
       var timer = null;
+
+      if (counterTotal) {
+        counterTotal.textContent = String(total);
+      }
 
       track.style.width = total * 100 + "%";
       slides.forEach(function (slide) {
