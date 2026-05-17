@@ -1,0 +1,18 @@
+<svg width="260" height="240" viewBox="0 0 260 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14212f" />
+      <stop offset="100%" stop-color="#0d131c" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="8" width="240" height="224" rx="18" fill="url(#paper)" stroke="#2f5e8f" stroke-width="8" />
+  <path d="M28 40 H232" stroke="#4ebaff" stroke-width="2" opacity="0.85" />
+  <path d="M28 68 H232" stroke="#4ebaff" stroke-width="2" opacity="0.7" />
+  <path d="M28 96 H232" stroke="#4ebaff" stroke-width="2" opacity="0.65" />
+  <path d="M80 28 V212" stroke="#4ebaff" stroke-width="2" opacity="0.65" />
+  <path d="M132 28 V212" stroke="#4ebaff" stroke-width="2" opacity="0.65" />
+  <rect x="42" y="114" width="88" height="56" rx="10" fill="none" stroke="#72d4ff" stroke-width="4" opacity="0.9" />
+  <path d="M70 134 H118" stroke="#72d4ff" stroke-width="4" />
+  <path d="M80 148 H108" stroke="#72d4ff" stroke-width="4" />
+  <path d="M112 112 V166" stroke="#72d4ff" stroke-width="4" />
+</svg>

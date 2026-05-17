@@ -259,9 +259,75 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  function initImageFullscreenGallery() {
+    var overlay = document.getElementById("fullscreen-overlay");
+    if (!overlay) return;
+
+    var fullscreenImg = document.getElementById("fullscreen-image");
+    var fullscreenTitle = document.getElementById("fullscreen-title");
+    var fullscreenDescription = document.getElementById("fullscreen-description");
+    var closeButton = overlay.querySelector(".image-overlay-close");
+    var cards = document.querySelectorAll(".section-grid-rail .screenshot-card");
+
+    function openImage(card) {
+      var img = card.querySelector("img");
+      if (!img || !fullscreenImg || !fullscreenTitle || !fullscreenDescription) return;
+      var title = card.dataset.title || img.alt || "Rail image";
+      var description = card.dataset.description || card.querySelector(".screenshot-card-caption")?.textContent || img.alt;
+
+      fullscreenImg.src = img.src;
+      fullscreenImg.alt = img.alt || title;
+      fullscreenTitle.textContent = title;
+      fullscreenDescription.textContent = description;
+      overlay.hidden = false;
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      if (overlay.requestFullscreen) {
+        overlay.requestFullscreen().catch(function () {});
+      } else if (overlay.webkitRequestFullscreen) {
+        overlay.webkitRequestFullscreen();
+      }
+    }
+
+    function closeOverlay() {
+      overlay.hidden = true;
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) {
+          document.exitFullscreen().catch(function () {});
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
+    }
+
+    cards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        openImage(card);
+      });
+    });
+
+    closeButton && closeButton.addEventListener("click", closeOverlay);
+
+    overlay.addEventListener("click", function (event) {
+      if (event.target === overlay || event.target.classList.contains("image-overlay-backdrop")) {
+        closeOverlay();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && !overlay.hidden) {
+        closeOverlay();
+      }
+    });
+  }
+
   applySiteConfig();
   initServerStatus();
   initLiveMapFallback();
+  initImageFullscreenGallery();
 
   document.querySelectorAll(".js-copy-ip").forEach(function (btn) {
     btn.addEventListener("click", function () {

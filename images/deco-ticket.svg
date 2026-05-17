@@ -1,0 +1,15 @@
+<svg width="300" height="180" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="ticketBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#121820" />
+      <stop offset="100%" stop-color="#191f29" />
+    </linearGradient>
+  </defs>
+  <path d="M18 24 H262 a24,24 0 0 1 24 24 v84 a24,24 0 0 1 -24 24 H18 a24,24 0 0 1 -24 -24 V48 a24,24 0 0 1 24 -24 Z" fill="url(#ticketBg)" stroke="#4cd8ff" stroke-width="6" />
+  <circle cx="20" cy="86" r="12" fill="#07090e" />
+  <circle cx="280" cy="94" r="12" fill="#07090e" />
+  <line x1="52" y1="54" x2="200" y2="54" stroke="#6fd6ff" stroke-width="4" opacity="0.85" stroke-linecap="round" />
+  <line x1="52" y1="76" x2="200" y2="76" stroke="#6fd6ff" stroke-width="4" opacity="0.75" stroke-linecap="round" />
+  <line x1="52" y1="98" x2="156" y2="98" stroke="#6fd6ff" stroke-width="4" opacity="0.75" stroke-linecap="round" />
+  <path d="M50 114 H220" stroke="#6fd6ff" stroke-width="3" stroke-dasharray="6 6" opacity="0.7" />
+</svg>

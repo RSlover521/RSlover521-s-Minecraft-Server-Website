@@ -1,0 +1,18 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="signBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e2632" />
+      <stop offset="100%" stop-color="#131820" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3dd6ff" />
+      <stop offset="100%" stop-color="#49b2ff" />
+    </linearGradient>
+  </defs>
+  <polygon points="120,20 220,120 120,220 20,120" fill="url(#signBg)" stroke="#65ddff" stroke-width="12" />
+  <rect x="108" y="118" width="24" height="92" rx="12" fill="#19232f" />
+  <path d="M72 96 L168 96 L168 108 L72 108 Z" fill="#65ddff" opacity="0.9" />
+  <path d="M84 136 L156 136" stroke="#65ddff" stroke-width="16" stroke-linecap="round" />
+  <path d="M84 154 L156 154" stroke="#65ddff" stroke-width="16" stroke-linecap="round" />
+  <circle cx="120" cy="87" r="18" fill="#65ddff" opacity="0.5" />
+</svg>
