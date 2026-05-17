@@ -210,11 +210,13 @@ a:hover {
 
 .hero {
   position: relative;
+  z-index: 0;
   min-height: calc(100vh - var(--header-h));
   display: flex;
   align-items: center;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem) clamp(2.5rem, 5vw, 4rem);
   overflow: hidden;
+  background: url("images/slide-5.png") center center / cover no-repeat;
 }
 
 .hero::before {
@@ -256,7 +258,7 @@ a:hover {
 .hero-bg {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   background: url("images/slide-5.png") center center / cover no-repeat;
   background-color: transparent;
 }
@@ -265,7 +267,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(7, 9, 14, 0.18) 0%, rgba(7, 9, 14, 0.08) 35%, rgba(7, 9, 14, 0.28) 100%);
+  background: linear-gradient(180deg, rgba(7, 9, 14, 0.38) 0%, rgba(7, 9, 14, 0.24) 35%, rgba(7, 9, 14, 0.48) 100%);
 }
 
 .hero-bg::after {
