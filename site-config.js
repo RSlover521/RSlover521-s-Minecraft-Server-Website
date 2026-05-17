@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
   liveMapUrl: "http://createtrackmap.rslover521minecraftserver.pro:12010/",
   blueMapUrl: "http://bluemap.rslover521minecraftserver.pro:12009/",
   /** Shown when the BlueMap iframe can't be embedded */
-  blueMapFallbackImageSrc: "images/bluemap-fallback.png",
+  blueMapFallbackImageSrc: "images/bluemap-fallback.jpg",
   discordUrl: "https://discord.gg/zJguWKyjDt",
   /** How often to refresh the header server status (ms). 0 = check once only. */
   serverStatusRefreshMs: 120000,

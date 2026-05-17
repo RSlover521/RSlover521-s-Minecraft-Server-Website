@@ -6,7 +6,7 @@
           serverIp: "mc.rslover521minecraftserver.pro",
           liveMapUrl: "http://createtrackmap.rslover521minecraftserver.pro:12010/",
           blueMapUrl: "http://bluemap.rslover521minecraftserver.pro:12009/",
-          blueMapFallbackImageSrc: "images/bluemap-fallback.png",
+          blueMapFallbackImageSrc: "images/bluemap-fallback.jpg",
           discordUrl: "https://discord.gg/zJguWKyjDt",
           modpackUrl:
             "https://drive.google.com/file/d/1epZm2OUujBxiAsuTPkKZ0kMfh7dPz29B/view?usp=drive_link",
