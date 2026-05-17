@@ -1,0 +1,19 @@
+<svg width="320" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="hatGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b212b" />
+      <stop offset="100%" stop-color="#0f1318" />
+    </linearGradient>
+    <linearGradient id="trimGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb545" />
+      <stop offset="100%" stop-color="#f9a736" />
+    </linearGradient>
+  </defs>
+  <rect x="20" y="68" width="280" height="46" rx="22" fill="url(#hatGrad)" />
+  <path d="M38 72 C66 38, 254 38, 282 72 L282 96 C254 62, 66 62, 38 96 Z" fill="url(#hatGrad)" />
+  <ellipse cx="160" cy="112" rx="136" ry="30" fill="#11161f" opacity="0.96" />
+  <rect x="44" y="84" width="232" height="20" rx="10" fill="url(#trimGrad)" />
+  <rect x="88" y="72" width="24" height="8" rx="4" fill="#1b212b" opacity="0.58" />
+  <rect x="208" y="72" width="24" height="8" rx="4" fill="#1b212b" opacity="0.58" />
+  <path d="M90 94 L120 94 C124 102, 132 104, 140 102 L180 102 C186 104, 195 102, 200 94 L230 94" stroke="#ffde85" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.95" />
+</svg>

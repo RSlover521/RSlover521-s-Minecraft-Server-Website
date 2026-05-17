@@ -45,6 +45,7 @@
     <main id="top">
       <!-- Hero -->
       <section class="hero">
+        <div class="decoration decoration--hero" aria-hidden="true"></div>
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="hero-layout">
           <div class="hero-copy">
@@ -100,6 +101,7 @@
 
       <!-- Cinematic carousel -->
       <section id="story" class="section showcase" aria-label="The network in pictures">
+        <div class="decoration decoration--blueprint" aria-hidden="true"></div>
         <div class="section-head section-head--center">
           <h2>The Network, Frame by Frame</h2>
           <p>From the first platform to the last signal—one continuous system.</p>
@@ -258,6 +260,83 @@
             you can open on your phone—not a generic modded lobby.
           </p>
         </div>
+        <div class="comparison-table-wrap">
+          <h3>Why This Server Feels Different</h3>
+          <div class="comparison-table-scroll">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>FEATURES</th>
+                  <th>Typical Modded SMP</th>
+                  <th>Generic Survival Server</th>
+                  <th>This Server (RSlover521 Modded Server)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Clear Server Identity</td>
+                  <td>❌ Random modpack focus</td>
+                  <td>❌ Standard survival gameplay</td>
+                  <td>✅ Unified rail & infrastructure vision</td>
+                </tr>
+                <tr>
+                  <td>Functional Transportation</td>
+                  <td>⚠️ Cosmetic or limited</td>
+                  <td>❌ Rarely exists</td>
+                  <td>✅ Fully connected rail system</td>
+                </tr>
+                <tr>
+                  <td>Persistent Worldbuilding</td>
+                  <td>⚠️ Frequent resets</td>
+                  <td>⚠️ Small-scale progression</td>
+                  <td>✅ Expanding long-term infrastructure</td>
+                </tr>
+                <tr>
+                  <td>Community Integration</td>
+                  <td>⚠️ Isolated player bases</td>
+                  <td>⚠️ Minimal collaboration</td>
+                  <td>✅ Interconnected cities & logistics</td>
+                </tr>
+                <tr>
+                  <td>Engineering Gameplay</td>
+                  <td>⚠️ Optional side activity</td>
+                  <td>❌ Mostly absent</td>
+                  <td>✅ Core gameplay focus</td>
+                </tr>
+                <tr>
+                  <td>Large-Scale Infrastructure</td>
+                  <td>❌ Rare</td>
+                  <td>❌ Uncommon</td>
+                  <td>✅ Designed around transit networks</td>
+                </tr>
+                <tr>
+                  <td>World Atmosphere</td>
+                  <td>⚠️ Generic modded experience</td>
+                  <td>⚠️ Casual survival</td>
+                  <td>✅ Immersive industrial environment</td>
+                </tr>
+                <tr>
+                  <td>Sense of Purpose</td>
+                  <td>⚠️ “Just survive”</td>
+                  <td>⚠️ Build independently</td>
+                  <td>✅ Build systems that connect the world</td>
+                </tr>
+                <tr>
+                  <td>Rail Operations</td>
+                  <td>❌ Decorative at best</td>
+                  <td>❌ None</td>
+                  <td>✅ Active transportation network</td>
+                </tr>
+                <tr>
+                  <td>Long-Term Vision</td>
+                  <td>⚠️ Temporary progression</td>
+                  <td>⚠️ Short-lived worlds</td>
+                  <td>✅ Continuously evolving world</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="feature-grid">
           <article class="feature-card card card-feature">
             <div class="card-icon" aria-hidden="true">🛤</div>
@@ -289,6 +368,7 @@
 
       <!-- Live map spotlight -->
       <section id="live-map" class="section section-spotlight">
+        <div class="decoration decoration--warning" aria-hidden="true"></div>
         <div class="spotlight-layout">
           <div class="spotlight-copy">
             <h2>Track Your Train—In Real Time</h2>
@@ -370,13 +450,13 @@
       </section>
 
       <!-- Rail in action grid -->
-      <section class="section section-grid-rail" aria-label="Rail network in action">
+      <section class="section section-grid-rail" aria-label="Rail network gallery">
         <div class="section-head">
-          <h2>Rail Network in Action</h2>
-          <p>Stations, signals, consists, and the spaces between—built to be used.</p>
+          <h2>Rail Network Gallery</h2>
+          <p>Click any image to open it full-screen with its title and description.</p>
         </div>
         <div class="screenshot-grid">
-          <figure class="screenshot-card">
+          <figure class="screenshot-card" data-title="Glass hub station" data-description="A central hub built for throughput and presence.">
             <div class="screenshot-card-media">
               <img
                 src="images/slide-5.png"
@@ -389,33 +469,7 @@
             </div>
             <figcaption class="screenshot-card-caption">A central hub built for throughput and presence.</figcaption>
           </figure>
-          <figure class="screenshot-card">
-            <div class="screenshot-card-media">
-              <img
-                src="images/slide-7.png"
-                alt="Surface station entrance with signage and autumn trees."
-                width="1920"
-                height="1080"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <figcaption class="screenshot-card-caption">Arrivals start at entrances designed to orient you instantly.</figcaption>
-          </figure>
-          <figure class="screenshot-card">
-            <div class="screenshot-card-media">
-              <img
-                src="images/slide-3.png"
-                alt="Passenger train at a snowy station in fog."
-                width="1920"
-                height="1080"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <figcaption class="screenshot-card-caption">Weather and atmosphere change how each run feels.</figcaption>
-          </figure>
-          <figure class="screenshot-card">
+          <figure class="screenshot-card" data-title="Railway hangar" data-description="Industry and creativity side by side with the main line.">
             <div class="screenshot-card-media">
               <img
                 src="images/slide-4.png"
@@ -428,7 +482,20 @@
             </div>
             <figcaption class="screenshot-card-caption">Industry and creativity side by side with the main line.</figcaption>
           </figure>
-          <figure class="screenshot-card">
+          <figure class="screenshot-card" data-title="Snowy platform" data-description="Weather and atmosphere change how each run feels.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-3.png"
+                alt="Passenger train at a snowy station in fog."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Weather and atmosphere change how each run feels.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Foggy shoreline" data-description="Remote lines reach coasts, forts, and player-made destinations.">
             <div class="screenshot-card-media">
               <img
                 src="images/slide-2.png"
@@ -441,21 +508,125 @@
             </div>
             <figcaption class="screenshot-card-caption">Remote lines reach coasts, forts, and player-made destinations.</figcaption>
           </figure>
-          <figure class="screenshot-card">
+          <figure class="screenshot-card" data-title="Snowy interchange" data-description="Massive interchanges connect lines across the entire network.">
             <div class="screenshot-card-media">
               <img
-                src="images/slide-11.png"
-                alt="Nighttime signal gantry over converging tracks."
+                src="images/slide-1.png"
+                alt="Aerial night view of snow-covered terrain with a lit rail interchange and station."
                 width="1920"
                 height="1080"
                 loading="lazy"
                 decoding="async"
               />
             </div>
-            <figcaption class="screenshot-card-caption">Signals choreograph movement where routes meet.</figcaption>
+            <figcaption class="screenshot-card-caption">Massive interchanges connect lines across the entire network.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Underground metro" data-description="Step into a fully realized metro system built for a living world.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-6.png"
+                alt="Clean underground metro platform with a modern train and station lighting."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Step into a fully realized metro system built for a living world.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Station entrance" data-description="Arrivals start at entrances designed to orient you instantly.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-7.png"
+                alt="Surface station entrance with signage and autumn trees."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Arrivals start at entrances designed to orient you instantly.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Forest track" data-description="Beyond the rails lies a world waiting to be explored.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-8.png"
+                alt="Forest path at night lined with warm lanterns."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Beyond the rails lies a world waiting to be explored.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Night rail yard" data-description="An active rail yard where multiple trains operate at once.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-9.png"
+                alt="Rail yard at night with multiple trains on parallel tracks."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">An active rail yard where multiple trains operate at once.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Station stairwell" data-description="Every station is designed for immersion—from entrance to platform.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-10.png"
+                alt="Station stairwell leading down toward platforms with modern lighting."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Every station is designed for immersion—from entrance to platform.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Signal junction" data-description="A fully signaled railway—every movement is controlled.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-11.png"
+                alt="Railway junction at night with signals controlling several tracks."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">A fully signaled railway—every movement is controlled.</figcaption>
+          </figure>
+          <figure class="screenshot-card" data-title="Dual platform station" data-description="Trains arrive, depart, and connect players across the world.">
+            <div class="screenshot-card-media">
+              <img
+                src="images/slide-12.png"
+                alt="Station platform at night with two trains alongside dual platforms."
+                width="1920"
+                height="1080"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="screenshot-card-caption">Trains arrive, depart, and connect players across the world.</figcaption>
           </figure>
         </div>
       </section>
+      <div id="fullscreen-overlay" class="image-overlay" hidden aria-hidden="true">
+        <div class="image-overlay-backdrop"></div>
+        <div class="image-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="fullscreen-title">
+          <button type="button" class="image-overlay-close" aria-label="Close image preview">×</button>
+          <div class="image-overlay-content">
+            <img id="fullscreen-image" src="" alt="" />
+            <div class="image-overlay-copy">
+              <h3 id="fullscreen-title"></h3>
+              <p id="fullscreen-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- World & exploration -->
       <section class="section section-world" aria-label="Exploration beyond the railway">
@@ -481,6 +652,7 @@
 
       <!-- How to join -->
       <section id="join" class="section join">
+        <div class="decoration decoration--ticket-small" aria-hidden="true"></div>
         <div class="join-panel">
           <div class="join-copy">
             <h2>How to Join</h2>
