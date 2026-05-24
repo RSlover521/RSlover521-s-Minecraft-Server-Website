@@ -62,8 +62,7 @@ a:hover {
   z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
   height: var(--header-h);
   padding: 0 clamp(1.25rem, 4vw, 3rem);
@@ -336,8 +335,6 @@ a:hover {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 0.4rem;
 }
 
@@ -419,7 +416,7 @@ a:hover {
 @media (max-width: 1023px) {
   .hero-bar {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .hero-bar-stack {
@@ -427,8 +424,8 @@ a:hover {
   }
 
   .hero-bar .hero-actions {
-    align-self: center;
-    justify-content: center;
+    align-self: stretch;
+    justify-content: stretch;
   }
 
   .hero-bar .hero-actions .btn {
@@ -1003,6 +1000,13 @@ a:hover {
   border-top: 1px solid var(--border);
 }
 
+.features .section-head,
+.features .comparison-table-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .comparison-table-wrap {
   margin-bottom: 2rem;
 }
@@ -1063,7 +1067,21 @@ a:hover {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;
   gap: 1.25rem;
+}
+
+.feature-card {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.card-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .card {
@@ -1099,7 +1117,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
   font-size: 1.35rem;
   border-radius: 12px;
   background: linear-gradient(145deg, rgba(255, 154, 60, 0.15), rgba(61, 214, 255, 0.08));
@@ -1413,11 +1431,14 @@ a:hover {
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  justify-items: center;
   gap: 1.25rem;
 }
 
 .screenshot-card {
   margin: 0;
+  width: 100%;
+  max-width: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1435,6 +1456,7 @@ a:hover {
 }
 
 .screenshot-card-media {
+  width: 100%;
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #05070b;
@@ -1461,6 +1483,7 @@ a:hover {
 .screenshot-card-caption {
   margin: 0;
   padding: 1rem 1.15rem 1.15rem;
+  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-muted);
