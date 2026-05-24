@@ -139,6 +139,8 @@ a:hover {
 @media (min-width: 768px) {
   .nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -214,6 +216,7 @@ a:hover {
   min-height: calc(100vh - var(--header-h));
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem) clamp(2.5rem, 5vw, 4rem);
   overflow: hidden;
   background:
@@ -318,8 +321,8 @@ a:hover {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   gap: 1rem 1.5rem;
   padding: 1rem 1.15rem;
   border-radius: var(--radius);
@@ -349,6 +352,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem 0.65rem;
 }
 
@@ -409,7 +413,7 @@ a:hover {
 .hero-bar .hero-actions {
   flex: 0 0 auto;
   margin: 0;
-  justify-content: flex-end;
+  justify-content: center;
   align-self: center;
 }
 
@@ -544,6 +548,8 @@ a:hover {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 0;
 }
@@ -576,6 +582,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
 
@@ -1150,7 +1157,7 @@ a:hover {
 .join-steps li {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
   color: var(--text-muted);
 }
@@ -1206,6 +1213,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.75rem;
   align-items: center;
+  justify-content: center;
 }
 
 .ip {
@@ -1244,6 +1252,8 @@ a:hover {
 .badges {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
@@ -1333,6 +1343,8 @@ a:hover {
 .spotlight-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -1375,6 +1387,8 @@ a:hover {
   inset: 0;
   z-index: 2;
   display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   background: rgba(7, 9, 14, 0.35);
   backdrop-filter: blur(6px);
@@ -1601,7 +1615,9 @@ a:hover {
   padding: clamp(2rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   background: linear-gradient(165deg, rgba(20, 26, 36, 0.98), rgba(7, 9, 14, 0.98));
 }
 
@@ -1642,6 +1658,7 @@ a:hover {
 .cta-panel-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   justify-content: center;
 }
@@ -1672,7 +1689,7 @@ a:hover {
 .join-steps--numbered li {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
   color: var(--text-muted);
 }
@@ -1700,6 +1717,8 @@ a:hover {
 .join-inline-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
