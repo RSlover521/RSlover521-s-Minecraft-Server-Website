@@ -1065,14 +1065,16 @@ a:hover {
 }
 
 .feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 1.25rem;
 }
 
 .feature-card {
-  width: 100%;
+  flex: 1 1 260px;
+  width: min(100%, 24rem);
   max-width: 24rem;
 }
 
@@ -1429,15 +1431,17 @@ a:hover {
 }
 
 .screenshot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 1.25rem;
 }
 
 .screenshot-card {
   margin: 0;
-  width: 100%;
+  flex: 1 1 min(100%, 300px);
+  width: min(100%, 28rem);
   max-width: 28rem;
   display: flex;
   flex-direction: column;
