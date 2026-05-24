@@ -216,7 +216,9 @@ a:hover {
   align-items: center;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem) clamp(2.5rem, 5vw, 4rem);
   overflow: hidden;
-  background: var(--bg-deep);
+  background:
+    linear-gradient(rgba(7, 9, 14, 0.75), rgba(7, 9, 14, 0.75)),
+    url("images/slide-5.png") center center / 100% 100% no-repeat;
 }
 
 .hero::before {
@@ -266,8 +268,7 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("images/slide-5.png") center center / 100% 100% no-repeat;
-  opacity: 0.25;
+  background: transparent;
 }
 
 .hero-bg::after {
