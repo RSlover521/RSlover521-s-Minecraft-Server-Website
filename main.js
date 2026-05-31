@@ -254,6 +254,51 @@
     }
   }
 
+  function initMobileNav() {
+    var header = document.querySelector(".site-header");
+    var nav = document.getElementById("primary-nav");
+    var toggle = document.querySelector(".nav-toggle");
+    if (!header || !nav || !toggle) return;
+
+    function setOpen(isOpen) {
+      header.classList.toggle("nav-open", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    }
+
+    function isOpen() {
+      return header.classList.contains("nav-open");
+    }
+
+    toggle.addEventListener("click", function () {
+      setOpen(!isOpen());
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!isOpen() || header.contains(event.target)) return;
+      setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isOpen()) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 768) {
+        setOpen(false);
+      }
+    });
+  }
+
   var yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -403,6 +448,7 @@
   }
 
   applySiteConfig();
+  initMobileNav();
   initServerStatus();
   initLiveMapFallback();
   initImageFullscreenGallery();
