@@ -324,10 +324,89 @@
     });
   }
 
+  function initRailParallax() {
+    var layer = document.querySelector(".rail-parallax__image");
+    if (!layer) return;
+
+    var reduceMotion =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    var ticking = false;
+    var imageWidth = 390;
+    var imageHeight = 1919;
+    var stationStops = [42, 412, 766, 1136, 1508, 1850];
+
+    function getSections() {
+      return Array.prototype.slice.call(document.querySelectorAll("main > .section"));
+    }
+
+    function getHeaderOffset() {
+      var header = document.querySelector(".site-header");
+      return header ? header.offsetHeight : 0;
+    }
+
+    function getScaledStationY(sectionIndex) {
+      var width = layer.getBoundingClientRect().width || imageWidth;
+      var scale = width / imageWidth;
+      var loop = Math.floor(sectionIndex / stationStops.length);
+      var stop = stationStops[sectionIndex % stationStops.length] + loop * imageHeight;
+      return stop * scale;
+    }
+
+    function getAlignedY(sectionIndex) {
+      return getHeaderOffset() + 28 - getScaledStationY(sectionIndex);
+    }
+
+    function apply() {
+      ticking = false;
+      var sections = getSections();
+      if (!sections.length) return;
+
+      var scrollY = window.scrollY || window.pageYOffset || 0;
+      var headerOffset = getHeaderOffset();
+      var sectionStarts = sections.map(function (section) {
+        return section.offsetTop - headerOffset;
+      });
+      var activeIndex = 0;
+
+      for (var i = 0; i < sectionStarts.length; i += 1) {
+        if (scrollY >= sectionStarts[i]) {
+          activeIndex = i;
+        } else {
+          break;
+        }
+      }
+
+      var nextIndex = Math.min(activeIndex + 1, sections.length - 1);
+      var currentStart = sectionStarts[activeIndex];
+      var nextStart = sectionStarts[nextIndex];
+      var progress = nextStart > currentStart ? (scrollY - currentStart) / (nextStart - currentStart) : 0;
+      progress = Math.max(0, Math.min(1, progress));
+
+      var currentY = getAlignedY(activeIndex);
+      var nextY = getAlignedY(nextIndex);
+      var y = Math.round(currentY + (nextY - currentY) * progress);
+      layer.style.setProperty("--rail-parallax-y", y + "px");
+    }
+
+    function requestApply() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(apply);
+    }
+
+    apply();
+    window.addEventListener("scroll", requestApply, { passive: true });
+    window.addEventListener("resize", requestApply);
+  }
+
   applySiteConfig();
   initServerStatus();
   initLiveMapFallback();
   initImageFullscreenGallery();
+  initRailParallax();
 
   document.querySelectorAll(".js-copy-ip").forEach(function (btn) {
     btn.addEventListener("click", function () {

@@ -38,6 +38,53 @@ body {
   overflow-x: hidden;
 }
 
+.rail-parallax {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(61, 214, 255, 0.12), transparent 24rem),
+    radial-gradient(circle at 88% 28%, rgba(255, 154, 60, 0.1), transparent 22rem),
+    var(--bg-deep);
+}
+
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.rail-parallax__image {
+  position: absolute;
+  top: -12vh;
+  left: 50%;
+  width: min(100vw, 820px);
+  height: 150vh;
+  transform: translate3d(-50%, 0, 0);
+  background-image:
+    linear-gradient(90deg, rgba(7, 9, 14, 0.42), rgba(7, 9, 14, 0.12) 24%, rgba(7, 9, 14, 0.12) 76%, rgba(7, 9, 14, 0.42)),
+    url("images/parallax-rail-banner.png");
+  background-position:
+    center var(--rail-parallax-y, 0px),
+    center var(--rail-parallax-y, 0px);
+  background-repeat: repeat-y, repeat-y;
+  background-size: 100% auto, 100% auto;
+  opacity: 0.66;
+  filter: saturate(1.04) contrast(1.02);
+  will-change: background-position;
+}
+
+.rail-parallax::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 9, 14, 0.84), rgba(7, 9, 14, 0.2) 34%, rgba(7, 9, 14, 0.22) 66%, rgba(7, 9, 14, 0.84)),
+    linear-gradient(180deg, rgba(7, 9, 14, 0.35), transparent 16rem, transparent calc(100% - 12rem), rgba(7, 9, 14, 0.62));
+}
+
 .noise {
   pointer-events: none;
   position: fixed;
@@ -689,7 +736,7 @@ a:hover {
   padding-top: clamp(2rem, 5vw, 3rem);
   padding-bottom: clamp(2rem, 5vw, 3rem);
   border-top: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(14, 18, 25, 0.65) 0%, var(--bg-deep) 100%);
+  background: linear-gradient(180deg, rgba(14, 18, 25, 0.72) 0%, rgba(7, 9, 14, 0.78) 100%);
 }
 
 .carousel-shell {
@@ -996,7 +1043,7 @@ a:hover {
 
 
 .features {
-  background: var(--bg-panel);
+  background: rgba(14, 18, 25, 0.84);
   border-top: 1px solid var(--border);
 }
 
@@ -1321,7 +1368,7 @@ a:hover {
 /* --- Landing sections: live map, grids, world split, CTAs --- */
 
 .section-spotlight {
-  background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(14, 18, 25, 0.92) 50%, var(--bg-deep) 100%);
+  background: linear-gradient(180deg, rgba(7, 9, 14, 0.78) 0%, rgba(14, 18, 25, 0.84) 50%, rgba(7, 9, 14, 0.78) 100%);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -1426,7 +1473,7 @@ a:hover {
 }
 
 .section-grid-rail {
-  background: var(--bg-panel);
+  background: rgba(14, 18, 25, 0.84);
   border-top: 1px solid var(--border);
 }
 
