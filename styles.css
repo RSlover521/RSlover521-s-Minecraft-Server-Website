@@ -673,6 +673,7 @@ a:hover {
 }
 
 .hero-embed {
+  width: 100%;
   margin: 0;
 }
 
@@ -694,13 +695,14 @@ a:hover {
 
 .hero-embed-frame {
   position: relative;
+  width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   box-shadow: 0 16px 56px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(61, 214, 255, 0.06);
   aspect-ratio: 16 / 9;
-  min-height: 320px;
+  min-height: clamp(190px, 45vw, 320px);
 }
 
 .hero-embed-frame::after {
@@ -738,6 +740,31 @@ a:hover {
 
 .hero-embed-frame video {
   object-fit: cover;
+}
+
+@media (max-width: 560px) {
+  .hero-embed {
+    align-self: stretch;
+  }
+
+  .hero-embed-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-embed-frame {
+    min-height: 0;
+    max-height: min(58vw, 240px);
+  }
+
+  .hero-embed-frame video {
+    object-fit: contain;
+    background: #05070b;
+  }
+
+  .hero-embed-hint {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
 }
 
 .hero-embed-hint {
