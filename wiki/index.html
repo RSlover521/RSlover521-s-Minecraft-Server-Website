@@ -56,169 +56,28 @@
       </p>
     </header>
 
-    <main id="top" class="wiki-page">
-      <section class="wiki-hero">
-        <div class="wiki-hero-copy">
+    <main id="top" class="wiki-page wiki-reader">
+      <aside class="wiki-sidebar" aria-label="Wiki pages">
+        <div class="wiki-sidebar-head">
           <p class="eyebrow">Server Wiki</p>
-          <h1 class="hero-title">RSlover521 Knowledge Base</h1>
-          <p class="hero-lead">Guides, rules, route notes, and useful links for playing on the server.</p>
-          <div class="wiki-hero-actions">
-            <a class="btn btn-primary" href="#getting-started">Start Here</a>
-            <a class="btn btn-ghost" href="/">Back to Home</a>
-          </div>
+          <h1>Knowledge Base</h1>
+          <label class="wiki-search">
+            <span>Search pages</span>
+            <input id="wiki-search" type="search" placeholder="Search the wiki" autocomplete="off" />
+          </label>
         </div>
-        <aside class="wiki-status-panel" aria-label="Server quick info">
-          <p class="join-label">Server address</p>
-          <div class="ip-row">
-            <code class="ip js-server-ip" translate="no">mc.rslover521minecraftserver.pro</code>
-            <button type="button" class="btn btn-primary btn-copy js-copy-ip" aria-label="Copy server address">
-              Copy IP
-            </button>
-          </div>
-          <div class="badges">
-            <span class="badge">Java</span>
-            <span class="badge">Forge <span class="js-forge-badge">47.4.0</span></span>
-            <span class="badge">MC <span class="js-mc-badge">1.20.1</span></span>
-          </div>
-        </aside>
-      </section>
+        <nav id="wiki-page-list" class="wiki-page-list" aria-label="Wiki page list"></nav>
+      </aside>
 
-      <section class="section wiki-section" aria-label="Wiki quick links">
-        <div class="section-head">
-          <h2>Quick Links</h2>
-          <p>Jump straight into the pages players usually need first.</p>
+      <article class="wiki-document-shell" aria-live="polite">
+        <div class="wiki-document-tools">
+          <a class="btn btn-ghost btn-small" href="/">Home</a>
+          <button type="button" class="btn btn-primary btn-small js-copy-ip">Copy IP</button>
         </div>
-        <div class="wiki-link-grid">
-          <a href="#getting-started" class="wiki-link-card">
-            <span>Getting Started</span>
-            <small>Install Forge, grab the modpack, and join.</small>
-          </a>
-          <a href="#server-systems" class="wiki-link-card">
-            <span>Server Systems</span>
-            <small>Railways, maps, Create builds, and world notes.</small>
-          </a>
-          <a href="#rules" class="wiki-link-card">
-            <span>Rules</span>
-            <small>Community expectations and build etiquette.</small>
-          </a>
-          <a href="#faq" class="wiki-link-card">
-            <span>FAQ</span>
-            <small>Common connection and gameplay questions.</small>
-          </a>
+        <div id="wiki-document" class="wiki-document">
+          <p class="wiki-loading">Loading wiki...</p>
         </div>
-      </section>
-
-      <section id="getting-started" class="section wiki-section">
-        <div class="section-head">
-          <h2>Getting Started</h2>
-          <p>Use this section for your install guide and first-session checklist.</p>
-        </div>
-        <div class="wiki-content-grid">
-          <article class="wiki-article">
-            <h3>1. Install the correct version</h3>
-            <p>
-              The server uses Java Edition with Minecraft
-              <strong><span class="js-mc-badge">1.20.1</span></strong> and Forge
-              <strong><span class="js-forge-badge">47.4.0</span></strong>.
-            </p>
-          </article>
-          <article class="wiki-article">
-            <h3>2. Download the modpack</h3>
-            <p>
-              Keep the modpack in sync with the server before joining. Add update notes here whenever the pack changes.
-            </p>
-            <a class="btn btn-ghost btn-small" data-link="modpack" href="#" target="_blank" rel="noopener noreferrer">
-              Download Modpack
-            </a>
-          </article>
-          <article class="wiki-article">
-            <h3>3. Join the world</h3>
-            <p>Connect with the server address below, then check Discord for announcements and build coordination.</p>
-            <code class="wiki-code js-server-ip" translate="no">mc.rslover521minecraftserver.pro</code>
-          </article>
-        </div>
-      </section>
-
-      <section id="server-systems" class="section wiki-section">
-        <div class="section-head">
-          <h2>Server Systems</h2>
-          <p>Document the world mechanics that make this server different.</p>
-        </div>
-        <div class="wiki-table-wrap">
-          <table class="wiki-table">
-            <thead>
-              <tr>
-                <th>System</th>
-                <th>What to document</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Live Rail Map</td>
-                <td>Train tracking, station names, and route planning.</td>
-                <td><a data-link="live-map" href="#" target="_blank" rel="noopener noreferrer">Open map</a></td>
-              </tr>
-              <tr>
-                <td>3D World Map</td>
-                <td>Settlements, claims, landmarks, and navigation.</td>
-                <td><a data-link="blue-map" href="#" target="_blank" rel="noopener noreferrer">Open BlueMap</a></td>
-              </tr>
-              <tr>
-                <td>Create Builds</td>
-                <td>Factory standards, lag guidance, and shared infrastructure.</td>
-                <td><a href="#faq">FAQ</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section id="rules" class="section wiki-section">
-        <div class="section-head">
-          <h2>Rules</h2>
-          <p>Replace these starter rules with your final server policy.</p>
-        </div>
-        <div class="wiki-rule-list">
-          <article class="wiki-article">
-            <h3>Respect player builds</h3>
-            <p>Do not grief, steal, or modify another player's work without permission.</p>
-          </article>
-          <article class="wiki-article">
-            <h3>Build with the server in mind</h3>
-            <p>Keep farms, machines, and trains reasonable so the world stays smooth for everyone.</p>
-          </article>
-          <article class="wiki-article">
-            <h3>Coordinate shared routes</h3>
-            <p>Ask before connecting major railways or changing public stations, signals, and crossings.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="faq" class="section wiki-section">
-        <div class="section-head">
-          <h2>FAQ</h2>
-          <p>A home for answers you do not want to repeat in chat every week.</p>
-        </div>
-        <div class="wiki-faq">
-          <details>
-            <summary>What Minecraft version do I need?</summary>
-            <p>Use Minecraft <span class="js-mc-badge">1.20.1</span> with Forge <span class="js-forge-badge">47.4.0</span>.</p>
-          </details>
-          <details>
-            <summary>Where do I report issues?</summary>
-            <p>
-              Use the community Discord for bug reports, modpack questions, railway issues, and server announcements.
-            </p>
-          </details>
-          <details>
-            <summary>Can I add my own wiki pages?</summary>
-            <p>
-              Yes. Add more static pages under the <code>/wiki</code> folder and link them from this page.
-            </p>
-          </details>
-        </div>
-      </section>
+      </article>
     </main>
 
     <footer class="site-footer">
@@ -226,6 +85,8 @@
       <p class="footer-meta">&copy; <span id="year"></span> RSlover521 Rail Network</p>
     </footer>
 
+    <script src="/wiki/wiki-manifest.js"></script>
+    <script src="/wiki/wiki.js"></script>
     <script src="/main.js"></script>
   </body>
 </html>
