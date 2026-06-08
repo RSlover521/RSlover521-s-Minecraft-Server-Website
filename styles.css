@@ -2011,3 +2011,217 @@ a:hover {
 .showcase .section-head {
   margin-bottom: 2rem;
 }
+
+/* --- Wiki route --- */
+.wiki-page {
+  padding-top: clamp(2rem, 5vw, 4rem);
+}
+
+.wiki-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  min-height: calc(70vh - var(--header-h));
+  padding: clamp(4.5rem, 10vw, 7rem) clamp(1.25rem, 5vw, 5rem) clamp(3rem, 7vw, 5rem);
+}
+
+.wiki-hero::before {
+  content: "";
+  position: absolute;
+  inset: clamp(1rem, 3vw, 2rem);
+  z-index: -1;
+  border: 1px solid rgba(61, 214, 255, 0.16);
+  background:
+    linear-gradient(135deg, rgba(14, 18, 25, 0.92), rgba(7, 9, 14, 0.68)),
+    radial-gradient(circle at 20% 20%, rgba(255, 154, 60, 0.14), transparent 18rem);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
+.wiki-hero-copy {
+  max-width: 58rem;
+}
+
+.wiki-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.wiki-status-panel {
+  display: grid;
+  gap: 1rem;
+  max-width: 48rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  background: rgba(14, 18, 25, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.24);
+}
+
+.wiki-section {
+  padding-top: clamp(3rem, 8vw, 5rem);
+  padding-bottom: clamp(3rem, 8vw, 5rem);
+}
+
+.wiki-link-grid,
+.wiki-content-grid,
+.wiki-rule-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.wiki-link-card,
+.wiki-article,
+.wiki-faq details {
+  background: rgba(14, 18, 25, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+}
+
+.wiki-link-card {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 8rem;
+  padding: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wiki-link-card:hover {
+  border-color: rgba(61, 214, 255, 0.36);
+  box-shadow: 0 0 30px rgba(61, 214, 255, 0.12);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.wiki-link-card span,
+.wiki-article h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.wiki-link-card small,
+.wiki-article p,
+.wiki-faq p {
+  color: var(--text-muted);
+}
+
+.wiki-article {
+  padding: clamp(1.15rem, 3vw, 1.5rem);
+}
+
+.wiki-article h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+}
+
+.wiki-article p {
+  margin: 0;
+}
+
+.wiki-article .btn {
+  margin-top: 1rem;
+}
+
+.wiki-code {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.55rem 0.75rem;
+  color: var(--accent-2);
+  background: rgba(61, 214, 255, 0.08);
+  border: 1px solid rgba(61, 214, 255, 0.18);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.wiki-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(14, 18, 25, 0.9);
+}
+
+.wiki-table {
+  width: 100%;
+  min-width: 42rem;
+  border-collapse: collapse;
+}
+
+.wiki-table th,
+.wiki-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 200, 120, 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.wiki-table th {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.wiki-table td {
+  color: var(--text-muted);
+}
+
+.wiki-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.wiki-faq {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.wiki-faq details {
+  padding: 1rem 1.2rem;
+}
+
+.wiki-faq summary {
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.wiki-faq p {
+  margin: 0.75rem 0 0;
+}
+
+@media (min-width: 760px) {
+  .wiki-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.52fr);
+  }
+
+  .wiki-link-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .wiki-content-grid,
+  .wiki-rule-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .wiki-hero {
+    min-height: auto;
+  }
+
+  .wiki-hero::before {
+    inset: 0.75rem;
+  }
+
+  .wiki-status-panel .ip-row {
+    align-items: stretch;
+  }
+}
