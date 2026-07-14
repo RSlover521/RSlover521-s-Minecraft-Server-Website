@@ -864,6 +864,89 @@ a:hover {
   padding: clamp(3.5rem, 8vw, 6rem) clamp(1.25rem, 4vw, 3rem);
 }
 
+.affiliate-host {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1rem, 2.5vw, 1.35rem) clamp(1.25rem, 4vw, 3rem);
+  background:
+    linear-gradient(90deg, rgba(7, 9, 14, 0.96), rgba(14, 18, 25, 0.9)),
+    linear-gradient(135deg, rgba(61, 214, 255, 0.16), rgba(255, 154, 60, 0.14));
+  border-block: 1px solid rgba(255, 200, 120, 0.14);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.22);
+}
+
+.affiliate-host::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(61, 214, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 200, 120, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.42;
+}
+
+.affiliate-host-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+
+.affiliate-host-copy {
+  min-width: 0;
+}
+
+.affiliate-host-kicker {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.affiliate-host h2 {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.affiliate-host p {
+  max-width: 48rem;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: clamp(0.98rem, 2vw, 1.08rem);
+  line-height: 1.45;
+}
+
+.affiliate-host-cta {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .affiliate-host-inner {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .affiliate-host-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .decoration {
   position: absolute;
   pointer-events: none;
